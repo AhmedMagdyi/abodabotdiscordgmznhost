@@ -308,10 +308,30 @@ client.on('message' , message => {
      const embed = new Discord.RichEmbed()
  .setColor("RANDOM")
  .setThumbnail(client.user.avatarURL)    
- .setDescription("الدعم الفني" + `
+ .setDescription("سيرفر الخادم" + `
  **
-سيرفر الدعم الفني |
+سيرفر الخادم المعمول عليه البوت |
 https://discord.gg/cwPpKeq
+ **
+`);
+  message.author.sendEmbed(embed);
+   }
+});
+
+//tttttttttttt
+
+client.on('message' , message => {
+ 
+    if (message.content === "^inv") {
+        message.reply(`تم ارساله الرابط في الخاص`)
+        if(!message.channel.guild) return message.reply('**الآمر فقط في السيرفرات**');
+     const embed = new Discord.RichEmbed()
+ .setColor("RANDOM")
+ .setThumbnail(client.user.avatarURL)    
+ .setDescription("اضافة البوت" + `
+ **
+اضافة البوت |
+http://cutt.us/AlAboDen
  **
 `);
   message.author.sendEmbed(embed);
