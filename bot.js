@@ -302,7 +302,7 @@ client.on('message' , message => {
  .setDescription("سيرفر الخادم" + `
  **
 سيرفر الخادم المعمول عليه البوت |
-https://discord.gg/cwPpKeq
+https://discord.gg/83HSKAN
  **
 `);
   message.author.sendEmbed(embed);
