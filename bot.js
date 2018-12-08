@@ -202,6 +202,8 @@ client.on("message", message => {
 
 ** Welcome ~ لعمل ترحيب ب روم مخصص سوي روم ب الاسم ده**
 
+تاريخ انتهاء صلاحية البوت : 10/12/2018
+Copyright © GMZN Host
 `)
    message.author.sendEmbed(embed)
    
