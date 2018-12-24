@@ -183,9 +183,6 @@ client.on("message", message => {
      message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed()
       .setDescription(`
-
-** *hostserver ~ دعوه لسيرفر الخادم المسوي البو**
-
 ** ^inv ~ لدعوة البوت ل سيرفرك**
 
      [❖═══════ اوامر اداريه ═══════❖]
@@ -202,7 +199,7 @@ client.on("message", message => {
 
 ** Welcome ~ لعمل ترحيب ب روم مخصص سوي روم ب الاسم ده**
 
-تاريخ انتهاء صلاحية البوت : 10/12/2018
+تاريخ انتهاء صلاحية البوت : __Premium__
 Copyright © GMZN Host
 `)
    message.author.sendEmbed(embed)
@@ -291,25 +288,6 @@ if (message.content.startsWith(adminprefix + 'tw')) {
 }
 });
 
-//كود سيرفر الخادم
-
-client.on('message' , message => {
- 
-    if (message.content === "*hostserver") {
-        message.reply(`تم ارساله الرابط في الخاص`)
-        if(!message.channel.guild) return message.reply('**الآمر فقط في السيرفرات**');
-     const embed = new Discord.RichEmbed()
- .setColor("RANDOM")
- .setThumbnail(client.user.avatarURL)    
- .setDescription("سيرفر الخادم" + `
- **
-سيرفر الخادم المعمول عليه البوت |
-https://discord.gg/83HSKAN
- **
-`);
-  message.author.sendEmbed(embed);
-   }
-});
 
 //tttttttttttt
 
