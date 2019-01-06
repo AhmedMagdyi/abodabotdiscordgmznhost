@@ -280,7 +280,7 @@ client.on('message', async message => {
     if(message.author.bot) return;
     if(message.channel.type === 'dm') return;
  
-    var prefix = ':'; //<==== تقدر تغير البرفكس
+    var prefix = '*'; //<==== تقدر تغير البرفكس
     var args = message.content.toLowerCase().split(' ');
     var command = args[0];
     var userM = message.guild.member(message.mentions.users.first() || message.guild.members.find(m => m.id === args[1]));
