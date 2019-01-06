@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const prefix = ':'
+const prefix = '*'
  
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -109,7 +109,7 @@ if (message.mentions.users.size < 1) return message.reply("**منشن الشخص
 
 client.on('message', message => {  
 if (message.author.boss) return;
-var prefix = ":";
+var prefix = "*";
 if (!message.content.startsWith(prefix)) return;
 let command = message.content.split(" ")[0];
 command = command.slice(prefix.length);
@@ -184,35 +184,35 @@ if (message.content === "*help") {
  message.author.sendMessage(`
      [❖═══════ اوامر عامة ═══════❖]
 
-** :server ~ لعرض معلومات السيرفر**
+** *server ~ لعرض معلومات السيرفر**
 
-** :id  ~ لمعرفة معلومات حسابك او معلومات حساب احد تمنشنة**
+** *id  ~ لمعرفة معلومات حسابك او معلومات حساب احد تمنشنة**
 
-** :avatar ~ لعرض صورتك او صورة احد تمنشنو**
+** *avatar ~ لعرض صورتك او صورة احد تمنشنو**
 
      [❖═══════ اوامر اداريه ═══════❖]
 
-** :mute <@mention> <Reason> ~ لعمل ميوت كتابي لحد**
+** *mute <@mention> <Reason> ~ لعمل ميوت كتابي لحد**
 
-** :umute <@mention> ~ لفك الميوت الكتابي**
+** *umute <@mention> ~ لفك الميوت الكتابي**
 
-** :ban <@mention> ~ ل تبنيد احد من السيرفر**
+** *ban <@mention> ~ ل تبنيد احد من السيرفر**
 
-** :kick <@mention> ~ ل طرد احد من السيرفر**
+** *kick <@mention> ~ ل طرد احد من السيرفر**
 
-** :bc <message> ~ لعمل برودكاست لأعضاء السيرفر**
+** *bc <message> ~ لعمل برودكاست لأعضاء السيرفر**
 
-** :nbc ~ لأرسال رسالة لجميع السيرفر فقط ب الكلام**
+** *nbc ~ لأرسال رسالة لجميع السيرفر فقط ب الكلام**
 
-** :clear <Number> ~ لمسح الشات بعدد**
+** *clear <Number> ~ لمسح الشات بعدد**
 
-** :cchat ~ لتسكير او قفل الشات**
+** *cchat ~ لتسكير او قفل الشات**
 
-** :unchat ~ لفتح الشات**
+** *unchat ~ لفتح الشات**
 
-** :voto <#room> <message> ~ لعمل تصويت ب روم**
+** *voto <#room> <message> ~ لعمل تصويت ب روم**
 
-** :role <@mention> <@role> ~ لأعطاء احد رتبة معينة**
+** *role <@mention> <@role> ~ لأعطاء احد رتبة معينة**
 
 ** لتفعيل خاصية الترحيب قم ب انشاء روم ب اسم Welcome**
 
@@ -280,7 +280,7 @@ client.on('message', async message => {
     if(message.author.bot) return;
     if(message.channel.type === 'dm') return;
  
-    var prefix = ':'; //<==== تقدر تغير البرفكس
+    var prefix = '*'; //<==== تقدر تغير البرفكس
     var args = message.content.toLowerCase().split(' ');
     var command = args[0];
     var userM = message.guild.member(message.mentions.users.first() || message.guild.members.find(m => m.id === args[1]));
@@ -569,7 +569,7 @@ client.on('message', async message => {
 //كود امر عمل تصويت من البوت في روم مخصص
  
 client.on('message' , message => {
-  var prefix = ":";
+  var prefix = "*";
   if(message.author.bot) return;
   if(message.content.startsWith(prefix + "voto")) {
   if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
@@ -610,7 +610,7 @@ suggestchannel.send("@everyone || @here ");
  
 client.on('message', message => {
  
-    if (message.content === ":cchat") {
+    if (message.content === "*cchat") {
                         if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
  
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
@@ -621,7 +621,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' لي
                message.reply("تم تقفيل الشات ✅ ")
            });
              }
-if (message.content === ":unchat") {
+if (message.content === "*unchat") {
     if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
  
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
@@ -690,7 +690,7 @@ client.on('message', function(msg) {
 //كود الايدي الهو المعلومات الشخصيه
  
 client.on('message', message => {
-  var prefix = ":"
+  var prefix = "*"
 var args = message.content.split(" ").slice(1);    
 if(message.content.startsWith(prefix + 'id')) {
 var year = message.author.createdAt.getFullYear()
@@ -746,7 +746,7 @@ message.channel.send({embed});
 //كود الأفتار
 
 client.on('message', message => {
-    if (message.content.startsWith(":avatar")) {
+    if (message.content.startsWith("*avatar")) {
         if (message.author.bot) return
         var mentionned = message.mentions.users.first();
     var omar;
@@ -771,7 +771,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-        var prefix = ":";
+        var prefix = "*";
               if(!message.channel.guild) return;
     if(message.content.startsWith(prefix + 'bc')) {
     if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
@@ -819,7 +819,7 @@ client.on('message', message => {
 client.on('message', message => {
             if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith(':nbc')){
+if (message.content.startsWith('*nbc')){
  if(!message.author.id === '') return;
   if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
@@ -831,7 +831,7 @@ m.sendMessage(args)
 
 //كود تغير البلاينج والتويتش
 
-const adminprefix = ":";
+const adminprefix = "*";
 const devs = ['523208914716721172', 'none'];
  
 
@@ -868,25 +868,5 @@ if (message.content.startsWith(adminprefix + 'st')) {
 });
 
 
-
-//كود الترحيب
-
-client.on('guildMemberAdd', Sal => { //By Salto7#4595
-    var embed = new Discord.RichEmbed()
-    .setAuthor(Sal.user.username, Sal.user.avatarURL)
-    .setThumbnail(Sal.user.avatarURL)
-    .setImage('http://live-timely-4jepdssgmc.time.ly/wp-content/uploads/2018/08/welcomeEvents.jpg') //هنا حط الصوره الي تبيها
-    .setTitle('عضو جديد!')
-    .setDescription('مرحبا بك بالسيرفر')
-    .addField('``ايدي العضو``:',"" +  Sal.user.id, true)
-    .addField('``تاق العضو``', Sal.user.discriminator, true)
-    .addField('``تم الانشاء في``', Sal.user.createdAt, true)
-    .addField(' 👤  انت رقم',`**[ ${Sal.guild.memberCount} ]**`,true)
-    .setColor('RANDOM')
-    .setFooter(Sal.guild.name, Sal.guild.iconURL, true)
-    var channel =Sal.guild.channels.find('【welcome-الترحيب】', 'welcome') // هنا حط اسم الروم الي تبيه يكتب فيه
-    if (!channel) return;
-    channel.send({embed : embed});
-    });
 
 client.login(process.env.BOT_TOKEN);
