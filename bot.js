@@ -832,7 +832,7 @@ m.sendMessage(args)
 //كود تغير البلاينج والتويتش
 
 const adminprefix = "*";
-const devs = ['523208914716721172', 'none'];
+const devs = ['523208914716721172', '318923640265637901'];
  
 
 client.on('message', message => {
