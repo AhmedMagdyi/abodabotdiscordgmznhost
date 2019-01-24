@@ -216,8 +216,7 @@ if (message.content === "*help") {
 
 ** لتفعيل خاصية الترحيب قم ب انشاء روم ب اسم Welcome**
 
-تاريخ انتهاء صلاحية البوت : __**6/1/2019**__
-Copyright © GMZN Host
+__**Copyright © GMZN Host**__
 `) 
  }
  });
