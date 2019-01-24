@@ -214,7 +214,7 @@ if (message.content === "*help") {
 
 ** *role <@mention> <@role> ~ لأعطاء احد رتبة معينة**
 
-** لتفعيل خاصية الترحيب قم ب انشاء روم ب اسم Welcome**
+**لتفعيل خاصية الترحيب قم ب انشاء روم ب اسم Welcome**
 
 __**Copyright © GMZN Host**__
 `) 
